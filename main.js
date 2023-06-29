@@ -5,13 +5,8 @@ let search_cards = document.querySelector('.search-result')
 
 // movies fetching
 // for popular section
-const json_url = new XMLHttpRequest();
-request.open( "https://json.extendsclass.com/bin/e0cfac108646", true);
-request.onreadystatechange = () => {
-	alert(request.responseText);
-};
-request.send();
-// let json_url = fetch('https://json.extendsclass.com/bin/e0cfac108646');
+
+let json_url = ("movies.json");
 
 
 
