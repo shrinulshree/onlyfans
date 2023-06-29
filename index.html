@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon"
+        href="./img/logo.png"
+        type="image/jpg">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- main style sheet -->
+    <link rel="stylesheet" href="style.css">
+    <title>Only fans</title>
+</head>
+
+<body>
+    <!-- ################################################################################################################ -->
+    <!-- main header -->
+    <header>
+        <div class="header-logo"><img
+                src="img/of.png"
+                alt=""></div>
+        <div class="nav-bar">
+            <nav>
+                <ul>
+                    <li><a href="#all-movies " id="Hollywood">Hollywood</a></li>
+                    <li><a href="#all-movies" id="Bollywood">Bollywood</a></li>
+                    <li><a href="#all-movies" id="hot">Adult</a></li>
+                    <li><a href="#all-movies" id="series" >Web-Series</a></li>
+                    <li>
+                        <a href="#" class="more-movies" id="more-item">More<i class="fa-solid fa-angle-down"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="more">
+                <ul style="color: #000;">
+                    <li><a href="#all-movies" id="drama">Drama</a></li>
+                    <li><a href="#all-movies" id="mystery">Mystery</a></li>
+                    <li><a href="#all-movies" id="romance">Romance</a></li>
+                    <li><a href="#all-movies" id="thriller">Thriller</a></li>
+                    <li><a href="#all-movies" id="war">War</a></li>
+                    <li><a href="#all-movies" id="comedy">Comdey</a></li>
+                    <li><a href="#all-movies" id="cartoon">Cartoon</a></li>
+                    <li><a href="#all-movies" id="adventure">Adventure</a></li>
+                    <li><a href="#all-movies" id="action">Action</a></li>
+                    <li><a href="#all-movies" id="shm">South - Movies</a></li>
+                </ul>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16" id="ham-btn">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <!-- = styling -->
+            <div class="hamburger"  id="phn_menu_bar">
+                <div class="header"><div class="header-logo"><img
+                    src="./img/ofnight.png"
+                    alt=""></div>
+                <div class="cross"><i class="fa-solid fa-circle-xmark" id="close-btn"></i></div></div>
+                
+                 <!-- list of movies types  -->
+                <ul>
+                    <li><a href="#all-movies" id="Hollywood" class="ham_btn"  >Hollywood</a></li>
+                    <li><a href="#all-movies" id="Bollywood" class="ham_btn" >Bollywood</a></li>
+                    <li><a href="#all-movies" id="hot" class="ham_btn">Adult</a></li>
+                    <li><a href="#all-movies" id="shm" class="ham_btn" >South Movies</a></li>
+                    <li><a href="#all-movies" id="series"class="ham_btn" class="series"   >Web-Series</a></li>
+                    <li><a href="#all-movies" id="drama"  class="ham_btn">Drama</a></li>
+                    <li><a href="#all-movies" id="mystery"  class="ham_btn">Mystery</a></li>
+                    <li><a href="#all-movies" id="romance"  class="ham_btn">Romance</a></li>
+                    <li><a href="#all-movies" id="thriller" class="ham_btn" >Thriller</a></li>
+                    <li><a href="#all-movies" id="war" class="ham_btn" >War</a></li>
+                    <li><a href="#all-movies" id="comedy" class="ham_btn" >Comdey</a></li>
+                    <li><a href="#all-movies" id="cartoon" class="ham_btn" >Cartoon</a></li>
+                    <li><a href="#all-movies" id="adventure" class="ham_btn" >Adventure</a></li>
+                    <li><a href="#all-movies" id="action" class="ham_btn" >Action</a></li>
+                </ul>
+            </div>  
+        </div>
+    </header>
+
+    <!-- serach section -->
+    <div class="search-section">
+        <div class="input-and-search-box">
+                     <!-- search bar -->
+                   <input type="text" placeholder="search here ..." id="search_input" onkeyup="search()">
+               <!-- search boxes -->
+            <div class="search-result search" id="movie-list">
+
+            </div>
+
+        </div>
+    </div>
+<!-- ################################################################################################################ -->
+    <!-- popular movies -->
+    <div class="popular-movies">
+        <h1>popular</h1>
+        <div class="empty-box"></div>
+        <div class="cards">
+         
+        </div>
+    </div>
+<!-- ======================================================================================================== -->
+    <!-- main telegram channel promotion -->
+
+    <div class="telegram-channel">
+        <a href="#"><i class="fa-brands fa-telegram"></i> join our telegram channel</a>
+    </div>
+
+<!-- ====================================================================================================== -->
+    <!-- movies section -->
+    <div class="movies-card" id="all-movies">
+
+        
+    </div>
+    <!-- ========================================================================================== -->
+
+    <footer style=" text-align: center; padding: 1rem; ">
+        <div class="sociallinks">
+            <div class="centre-social">
+            <div class="socialogo tele"><a href="#"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMZc_M_7p5osJctxM1fmfVYPF7oEjCB6GWeK2kHZj8rdiWysWL52rYSt1wqNcKAwZKtUliNarOOyS2CSWAqWOneP5k9Pvo15oCDsbxWYf1N94ENXapFNIP37YpOuwZjAAuXtdfOkAvcJKeL-J5yqnuV60_PQO8AU0zXrgeijMZU5tyurSF_fiy0AYV4eFa/s1600/telegram.png" alt=""></a></div>
+            <div class="socialogo insta"><a href="#"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjp-QnbhW1EEp5k39xN8_4P3kcCY6NNQLYb4uYHrtYdjbTm_UU-cmWV4nEdPB6XRm_G1ciFigTHM0r-wb7leHKaQW-pjPyK8cOFGUppkujOv6C_zPib8IHNqX4aarBOHKUyC7awlPfXTzEftdXClBuQ9iamK8j47GY7vqiKzv7sBN9Ll5s_52LJ2s7sOnUX/s1600/instagram.png" alt=""></a></div></div>
+        </div>
+        <div class="empty-box" style="border: 0.1rem solid black;"></div>
+        <p style="color: #000; margin-top: 1rem;"> <a href="./index.html" style="color:#000;">Only fans</a> © Copyright 2023</p>
+    </footer> 
+<!-- ============================================================================================================= -->
+
+    
+<!-- ############################################################################################################################### -->
+
+    <!-- pagination -->
+    <div class="pagination"></div>
+<!-- ######################################################################################### --> 
+    <!-- main java link -->
+    <script src="main.js"></script>
+</body>
+
+</html>

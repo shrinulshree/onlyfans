@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+*::selection{
+    background-color: transparent;
+    color: transparent;
+}
+
+
+*::-webkit-scrollbar{
+    width: 0.31rem;
+    height:0.1rem;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: transparents;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: #000;
+    border-radius: 20rem;
+}
+
+/* header styling */
+header{
+    /* background: linear-gradient(rgba(0, 0, 0, 0.829),rgba(0,0,0,0.5)); */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 999;
+    position: relative;
+}
+
+header .header-logo img{
+    height: 6rem;
+}
+
+header .nav-bar nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header .nav-bar nav ul li a,header .more ul li a{
+    font-size: 1.6rem;
+    color: #000;
+}
+
+header .nav-bar nav ul li a.more-movies i{
+    font-size: 1.6rem;
+margin-left: 0.2em;
+}
+
+
+
+header svg{
+    color: #000;
+    display: none;
+}
+
+/* header more styling */
+
+header .more{
+    position: absolute;
+    width: 55rem;
+    background: #fff;
+    margin-top: 3.5rem;
+    padding: 1rem;
+    opacity: 0;
+    border-radius: 2rem;
+}
+
+header .more ul{
+display: flex;
+flex-flow: row;
+gap: 2rem;
+flex-wrap: wrap;}
+
+header .more.active{
+    opacity: 1;
+}
+
+header .hamburger{
+    display: none;
+} 
+
+
+/* search section styling */
+.search-section{
+    background: url(./img/bkwl.jpg);
+    height: 95vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: relative;
+}
+
+.search-section .input-and-search-box{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40rem;
+}
+
+.search-section  input{
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 0.2em 1em;
+    border-radius:2rem;
+}
+
+.search-section .search-result{
+    margin-top: 1rem;
+    padding: 1rem;
+overflow-x: scroll; 
+height: 25rem;
+/* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)); */
+border-radius: 0.4rem;
+/* hiding this==================================================================================================>>>>>>>>>>>>>>> */
+/* display: none; */
+/* display: none; */
+visibility: hidden; 
+opacity: 0;  
+}
+.search-section .search-result .search-results-card{
+    height: 10rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    display: none;
+}
+
+.search-section .search-result .search-results-card .sr-img-box img{
+    height: 6rem;
+    border-radius: 1rem;
+}
+.search-section .search-result .search-results-card .sr-text-box{
+    text-overflow: ellipsis;
+    width: 20rem;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.search-section .search-result .search-results-card .sr-text-box h1{
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #000;
+    text-overflow: ellipsis;
+
+}
+.search-section .search-result .search-results-card .sr-text-box #type{
+    background: yellow;
+    font-size: 1rem;
+}
+.search-section .search-result .search-results-card .sr-text-box #gener{
+    background: rgb(68, 0, 255);
+    display: inline;
+    color: #fff;
+    margin-left: 1rem ;
+    font-size: 1rem;
+}
+
+.search-section .search-result .search-results-card .sr-watch-box a{
+    font-size: 1.6rem;
+    color: #fff;
+    background: #000;
+    padding: 0.2em;
+    text-transform: capitalize;
+    display: block;
+}
+.search-section .search-result .search-results-card .sr-watch-box a i{
+    margin-left: 0.4rem;
+}
+
+/* popular movies styling */
+.popular-movies{
+    /* position: absolute; */
+    /* top: 89%;
+    width: 100%; */
+    padding: 1rem;
+    background: #000;
+}
+
+.popular-movies h1{
+    font-size: 3rem;
+    color: white;
+    text-transform: capitalize;
+}
+.popular-movies .empty-box{
+    border: 0.1rem solid white;
+}
+.popular-movies .cards{
+    display: flex;
+    flex-flow: row;
+    overflow-x: scroll;
+}
+.popular-movies .cards .card{
+    margin: 1rem;
+    min-width: 23rem;
+    padding: 0.5rem;
+    /* height: auto; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: #fff;
+}
+.popular-movies .cards .card .card-img-box{
+    height: 30rem;
+}
+.popular-movies .cards .card .card-img-box img{
+    height: 100%;
+    width: 100%;
+}
+.popular-movies .cards .card .card-text-box{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.popular-movies .cards .card .card-text-box h1{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: #000;
+}
+.popular-movies .cards .card .card-text-box p {
+    color: white;
+    text-transform: capitalize;
+    display: flex;
+    font-size: 1.3rem;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+.popular-movies .cards .card .card-text-box p #type,#gener{
+    background: yellow;
+    font-size: 1rem;
+    color: #000;
+    /* background: #000; */
+    display: block;
+    padding: 0.2em;
+}
+.popular-movies .cards .card .card-text-box p #gener{
+background: rgb(68, 0, 255);
+display: inline;
+color: #fff;
+margin-left: 1rem ;
+font-size: 1rem;}
+
+.popular-movies .cards .card .card-text-box a{
+    font-size: 1.6rem;
+    color: #fff;
+    background: #000;
+    padding: 0.2em;
+    text-transform: capitalize;
+    display: block;
+}
+
+/* telegram */
+.telegram-channel{
+    text-align: center;
+}
+.telegram-channel a{
+    background: #009de1;
+display: block;
+color: #fff;
+font-size: 2rem;
+text-transform: capitalize;
+margin: 1rem;
+padding: 0.1em ;
+}
+.telegram-channel a i{
+    font-size: 2rem;
+}
+
+/* movies card */
+.movies-card{
+    /* background:#000 ; */
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+ gap: 1.6rem;
+   
+}
+.movies-card .card{
+    padding: 1rem;
+    border: 1px solid #000;
+}
+.movies-card .card .card-img-box{
+    height: 30rem;
+}
+
+.movies-card .card .card-img-box img{
+    height: 100%;
+    width: 100%;
+}
+.movies-card .card .card-text-box{
+    text-align: center;
+}
+.movies-card .card .card-text-box h1{
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin: 0.5rem;
+    color: #000;
+    text-transform: capitalize;
+}
+.movies-card .card .card-text-box a{
+    font-size: 1.6rem;
+    color: #fff;
+    background: #000;
+    padding: 0.2em;
+    text-transform: capitalize;
+    display: block;
+}
+
+.movies-card .card .card-text-box p {
+    color: white;
+    text-transform: capitalize;
+    display: flex;
+    font-size: 1.3rem;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+.movies-card .card .card-text-box p #type{
+    background: yellow;
+    font-size: 1rem;
+    color: #000;
+    /* background: #000; */
+    display: block;
+    padding: 0.2em;
+}
+.movies-card .card .card-text-box #gener{background: rgb(68, 0, 255);
+    display: inline;
+    color: #fff;
+    margin-left: 1rem ;
+    font-size: 1rem;}
+
+
+/* footer styling */
+footer{
+    display: block;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer .sociallinks{
+    width: auto;
+    height: 5rem;
+margin: 1rem auto;
+position: relative;
+
+
+}
+footer .sociallinks .centre-social{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+display: flex;
+
+}
+
+footer .sociallinks .socialogo{
+    float:right;
+    width: 2rem;
+    margin: 0 1rem;
+
+}
+footer .sociallinks .socialogo:hover{
+    cursor: pointer;
+}
+
+footer .sociallinks::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+footer .sociallinks .socialogo a img{
+    height: 2.4rem;
+    object-fit: cover;
+}
+
+
+footer p,footer p a{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    *{
+        margin: 0;padding: 0;
+        box-sizing: border-box;
+    }
+    header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+   }
+   header .header-logo img{
+    margin-top: 2rem;
+    height: 3rem;
+}
+header .nav-bar nav ul{
+    display: none;
+}
+header svg{
+    color: #000;
+    display: block;
+}
+header .more{
+    display: none;
+}
+.search-section .input-and-search-box{
+    width: 90%;
+}
+
+header .hamburger{
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    overflow-y: scroll;
+    /* note below code for furture vere use opacity for full screen */
+    transition: .2s linear ;
+    transform-origin: top right;
+    transform: scale(0);
+}
+/* === opactiy vecome 1 */
+header .hamburger.active{
+    transform: scale(1);
+
+}
+
+
+header .hamburger .header{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+}
+
+header .hamburger .fa-circle-xmark{
+    color: red;
+    font-size: 3rem;
+}
+header .hamburger ul{
+    margin-top: 9rem;
+    text-align: center;
+}
+header .hamburger ul li a{
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    margin: 2rem;
+}
+header .hamburger ul li a:hover{
+    color: #ef0a0a;
+}
+header .hamburger ul li a:active{
+    background: white;
+    color: black;
+}
+  }
